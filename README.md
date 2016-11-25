@@ -1,7 +1,7 @@
 express-noticeboard
 ===
 
-### Simple wrapper that turns cjs-noticeboard into an express middleware
+### Simple wrapper that turns [cjs-noticeboard](https://www.npmjs.com/package/cjs-noticeboard "cjs-noticeboard on npm") into express middleware
 
 ```js
 var express = require('express')(),
