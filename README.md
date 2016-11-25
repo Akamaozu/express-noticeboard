@@ -1,7 +1,7 @@
 express-noticeboard
 ===
 
-Simple wrapper that turns cjs-noticeboard into an express middleware.
+### Simple wrapper that turns cjs-noticeboard into an express middleware
 
 ```js
 var express = require('express')(),
@@ -10,7 +10,7 @@ var express = require('express')(),
 express.use( noticeboard );
 ```
 
-Send or watch notices from your routes.
+### Send or watch notices from your routes
 
 ```js
 express.post( '/user', function( req, res ){
@@ -34,7 +34,7 @@ express.get( '/user/:id', function( req, res ){
 });
 ```
 
-Send or watch notices from outside your routes.
+### Send or watch notices from outside your routes
 
 ```js
 express.post( '/user', function( req, res ){
@@ -46,12 +46,12 @@ express.post( '/user', function( req, res ){
 });
 
 noticeboard.watch( 'user-created', 'send-welcome-email', function(){
-  
+
   // send welcome email to user
 });
 
 noticeboard.watch( 'user-created', 'remove-user-from-marketing-funnel', function(){
-  
+
   // remove user from marketing funnel
 });
 ```
