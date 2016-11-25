@@ -1,7 +1,15 @@
 express-noticeboard
 ===
 
-### Simple wrapper that turns [cjs-noticeboard](https://www.npmjs.com/package/cjs-noticeboard "cjs-noticeboard on npm") into express middleware
+## Simple wrapper that turns [cjs-noticeboard](https://www.npmjs.com/package/cjs-noticeboard "cjs-noticeboard on npm") into express middleware
+
+### Install
+
+```js
+npm install express-noticeboard
+```
+
+### Use
 
 ```js
 var express = require('express')(),
@@ -19,18 +27,6 @@ express.post( '/user', function( req, res ){
 
   req.noticeboard.notify( 'user-created', user );
   res.send( 'account created!' );  
-});
-
-express.get( '/user/:id', function( req, res ){  
-  
-  req.noticeboard.once( 'get-user', {
-    id: req.param.id,
-    callback: function( error, user ){
-
-      if( error ) res.sendStatus( 500 );
-      else res.sendJson( user );
-    }
-  });  
 });
 ```
 
