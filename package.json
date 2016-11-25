@@ -1,0 +1,14 @@
+{
+  "name": "express-noticeboard",
+  "version": "0.0.1",
+  "description": "cjs-noticeboard as express middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cjs-noticeboard": "*"
+  }
+}
