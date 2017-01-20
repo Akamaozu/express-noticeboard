@@ -41,11 +41,10 @@ express.post( '/user', function( req, res ){
 ### Send or watch notices from outside your routes
 
 ```js
-express.post( '/user', function( req, res ){
-  
-  // after creating user  
-  req.noticeboard.notify( 'user-created', user );
-});
+var express = require('express')(),
+    noticeboard = require('express-noticeboard')( noticeboard_configs );
+
+express.use( noticeboard );
 
 noticeboard.watch( 'user-created', 'send-welcome-email', function(){
 
