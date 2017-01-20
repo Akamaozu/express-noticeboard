@@ -1,6 +1,6 @@
 {
   "name": "express-noticeboard",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "cjs-noticeboard as express middleware",
   "main": "index.js",
   "scripts": {
